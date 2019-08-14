@@ -79,6 +79,7 @@ span {
   padding: 20px;
   min-height: 600px;
   @include desktop-start {
+    padding: 30px;
     justify-content: center;
     height: 100vh;
   }
