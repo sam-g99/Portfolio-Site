@@ -136,6 +136,7 @@ span {
       margin-top: 40px;
       button {
         @include vertical-spacing(20px);
+        position: relative;
         background: none;
         border: none;
         align-self: flex-start;
@@ -157,9 +158,10 @@ span {
           &:active {
             transform: scale(1);
           }
-          &:hover + .underline {
-            width: 300px;
-            transform: scale(1.05) translate(-10px, -25px);
+          &:hover > .underline {
+            background: $blue;
+            transform: scale(1.02) translate(0px, -100%);
+            height: 90%;
           }
         }
       }
@@ -170,7 +172,8 @@ span {
         transform: translate(0px, -10px);
         z-index: -1;
         background: rgb(255, 255, 255);
-        transition: width 0.3s, transform 0.7s;
+        transition: width 0.3s, transform 0.3s, height 0.3s;
+        position: absolute;
       }
     }
   }
